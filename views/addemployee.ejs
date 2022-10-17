@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Add employee</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mt-5 mb-5">Add employee</h2>
+        <% if(successMsg){ %>
+            <div class="alert alert-success" role="alert">
+                <%= successMsg %>
+            </div>
+        <% } %>
+        <form method="POST">
+            <div class="mb-3">
+              <label for="empName" class="form-label">empName</label>
+              <input type="text" class="form-control" id="empName" name="empName" required>
+            </div>
+            <div class="mb-3">
+              <label for="empAddress" class="form-label">empAddress</label>
+              <input type="text" class="form-control" id="empAddress" name="empAddress" required>
+            </div>
+            <div class="mb-3">
+              <label for="empTel" class="form-label">empTel</label>
+              <input type="text" class="form-control" id="empTel" name="empTel" required>
+            </div>
+            <div class="mb-3">
+              <label for="empSalary" class="form-label">empSalary</label>
+              <input type="text" class="form-control" id="empSalary" name="empSalary" required>
+            </div>
+            <button type="submit" class="btn btn-success">Add</button>&nbsp;&nbsp;&nbsp;
+            <a href="/" class="btn btn-primary">Back</a>
+          </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
